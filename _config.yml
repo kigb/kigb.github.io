@@ -12,7 +12,7 @@ title                    : "Yixiong's Homepage'"
 title_separator          : "-"
 name                     : &name "Yixiong Fang"
 description              : &description "personal description"
-url                      : https://fangyixiong.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
+url                      : https://kigb.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
 
