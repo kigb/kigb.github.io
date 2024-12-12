@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "👋🏼Hi, I'm Yixiong Fang"
+title: "Hi, I'm Yixiong Fang👋🏼"
 author_profile: true
 redirect_from: 
   - /about/
@@ -20,7 +20,7 @@ I am willing to be contacted through wechat(fyx_04) or the social media listed!�
 - China Merchants Securities Co., Ltd. Quant Intern (2024.1 ~ 2024.2)
 - Changjiang Securities International Intern (2022.7 ~ 2022.8)
 
-## Research Experience
+## Publications
 - From Uncertainty to Trust: Enhancing Reliability in Vision-Language Models
 with Uncertainty-Guided Dropout Decoding. **Yixiong Fang**<sup>\*</sup>, Ziran Yang<sup>\*</sup>,  Zhaorun Chen,  Zhuokai Zhao<sup>†</sup>,  Jiawei Zhou<sup>†</sup>. [Link](https://arxiv.org/abs/2412.06474)
 
