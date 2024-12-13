@@ -22,12 +22,12 @@ I am willing to be contacted through wechat(fyx_04) or the social media listed!�
 
 ## Publications
 - From Uncertainty to Trust: Enhancing Reliability in Vision-Language Models
-with Uncertainty-Guided Dropout Decoding. **Yixiong Fang**<sup>\*</sup>, Ziran Yang<sup>\*</sup>,  Zhaorun Chen,  Zhuokai Zhao<sup>†</sup>,  Jiawei Zhou<sup>†</sup>. [Link](https://arxiv.org/abs/2412.06474) (in submission)
-
-- CodeCipher: Learning to Obfuscate Source Code Against LLMs. With Yalan Lin, Chengcheng Wan and Xiaodong Gu. [Link](https://arxiv.org/abs/2410.05797) (in submission)
+with Uncertainty-Guided Dropout Decoding. **Yixiong Fang**<sup>\*</sup>, Ziran Yang<sup>\*</sup>,  Zhaorun Chen,  Zhuokai Zhao<sup>†</sup>,  Jiawei Zhou<sup>†</sup>. [arXiv](https://arxiv.org/abs/2412.06474) (in submission)
+ [![GitHub stars](https://img.shields.io/github/stars/kigb/DropoutDecoding?style=social)](https://github.com/kigb/DropoutDecoding) 
+- CodeCipher: Learning to Obfuscate Source Code Against LLMs. With Yalan Lin, Chengcheng Wan and Xiaodong Gu. [arXiv](https://arxiv.org/abs/2410.05797) (in submission) [Code](https://anonymous.4open.science/r/CodeCipher_final-9D7E/README.md)
 
 - Efficient computation of eigenvalues in diffusion maps: A multi-strategy approach (SPML2024). **Yixiong Fang**<sup>\*</sup>, Weixi Yang, [Link](https://doi.org/10.54254/2755-2721/55/20241429)
 
 ## Open Source  
-- [![GitHub stars](https://img.shields.io/github/stars/SUSYUSTC/MathTranslate?style=social)](https://github.com/SUSYUSTC/MathTranslate) **MathTranslate** 
-- [![GitHub stars](https://img.shields.io/github/stars/oceanbase/oceanbase?style=social)](https://github.com/oceanbase/oceanbase) **OceanBase**
+- **MathTranslate** [![GitHub stars](https://img.shields.io/github/stars/SUSYUSTC/MathTranslate?style=social)](https://github.com/SUSYUSTC/MathTranslate) 
+- **OceanBase** [![GitHub stars](https://img.shields.io/github/stars/oceanbase/oceanbase?style=social)](https://github.com/oceanbase/oceanbase) 
