@@ -28,3 +28,6 @@ with Uncertainty-Guided Dropout Decoding. **Yixiong Fang**<sup>\*</sup>, Ziran Y
 
 - Efficient computation of eigenvalues in diffusion maps: A multi-strategy approach (SPML2024). **Yixiong Fang**<sup>\*</sup>, Weixi Yang, [Link](https://doi.org/10.54254/2755-2721/55/20241429)
 
+## Open Source  
+- [![GitHub stars](https://img.shields.io/github/stars/SUSYUSTC/MathTranslate?style=social)](https://github.com/SUSYUSTC/MathTranslate) **MathTranslate** 
+- [![GitHub stars](https://img.shields.io/github/stars/oceanbase/oceanbase?style=social)](https://github.com/oceanbase/oceanbase) **OceanBase**
