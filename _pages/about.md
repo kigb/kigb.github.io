@@ -23,8 +23,10 @@ I am willing to be contacted through wechat(fyx_04) or the social media listed!�
 
 ## Publications
 <sup>\*</sup> indicates equal contribution.
+
 ### 2025
 - Enhancing Speech Large Language Models for Deepfake Speech and Audio Detection through Feature Dropout and Dropin. Yupei Li<sup>\*</sup>, **Yixiong Fang**<sup>\*</sup>, Lucia Specia, Xiaodong Gu, Björn Schuller. (in submission)
+
 ### 2024
 - From Uncertainty to Trust: Enhancing Reliability in Vision-Language Models
 with Uncertainty-Guided Dropout Decoding. **Yixiong Fang**<sup>\*</sup>, Ziran Yang<sup>\*</sup>,  Zhaorun Chen,  Zhuokai Zhao<sup>†</sup>,  Jiawei Zhou<sup>†</sup>. [arXiv](https://arxiv.org/abs/2412.06474) (in submission)
