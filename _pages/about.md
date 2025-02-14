@@ -15,12 +15,17 @@ I am currently working on Large Language Models in the field of multi-modalities
 I am willing to be contacted through wechat(fyx_04) or the social media listed!👏🏼
 
 ## Work Experience
+- Evolutional Lab, Quant Development (2025.1 ~ )
 - Ant Group Co., Ltd., OceanBase, SQL Intern (2024.7 ~ 2024.8)
 - Step AI Intern (2024.3 ~ 2024.6)
 - China Merchants Securities Co., Ltd. Quant Intern (2024.1 ~ 2024.2)
 - Changjiang Securities International Quant Intern (2022.7 ~ 2022.8)
 
 ## Publications
+<sup>\*</sup> indicates equal contribution.
+### 2025
+- Enhancing Speech Large Language Models for Deepfake Speech and Audio Detection through Feature Dropout and Dropin. Yupei Li<sup>\*</sup>, **Yixiong Fang**<sup>\*</sup>, Lucia Specia, Xiaodong Gu, Björn Schuller. (in submission)
+### 2024
 - From Uncertainty to Trust: Enhancing Reliability in Vision-Language Models
 with Uncertainty-Guided Dropout Decoding. **Yixiong Fang**<sup>\*</sup>, Ziran Yang<sup>\*</sup>,  Zhaorun Chen,  Zhuokai Zhao<sup>†</sup>,  Jiawei Zhou<sup>†</sup>. [arXiv](https://arxiv.org/abs/2412.06474) (in submission)
  [![GitHub stars](https://img.shields.io/github/stars/kigb/DropoutDecoding?style=social)](https://github.com/kigb/DropoutDecoding) 
