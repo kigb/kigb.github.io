@@ -16,7 +16,6 @@ I am willing to be contacted through wechat(fyx_04) or the social media listed!ð
 
 ## Work Experience
 - Emagen AI (current)
-- Evolutional Lab, Quant Development (current)
 - Ant Group Co., Ltd., OceanBase, SQL Intern (2024.7 ~ 2024.8)
 - Step AI Intern (2024.3 ~ 2024.6)
 - China Merchants Securities Co., Ltd. Quant Intern (2024.1 ~ 2024.2)
