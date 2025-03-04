@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Hi, I'm Yixiong Fang👋🏼"
+title: "Hi there, I'm Yixiong Fang👋🏼"
 author_profile: true
 redirect_from: 
   - /about/
@@ -8,7 +8,7 @@ redirect_from:
 ---
 I am 21 years old, interested in 📸photographing, 🎺playing trumpet,🎮playing video games, 🗣️debating, and (maybe) 🏋🏼going to gym.
 
-🎓I am currently a fourth year undergraduate student at SJTU, majored in Software Engineering. I will graduate from SJTU in 2025 and search for Master/Phd Degrees in AI or Computer Systems.
+I am currently a fourth-year undergraduate student at **Shanghai Jiao Tong University**, majoring in **Software Engineering**, and will graduate in 2025. I will soon be starting my Master's program at **CMU SCS LTI** .
 
 I am currently working on Large Language Models in the field of multi-modalities, code generation and prompt engineering. Moreover, I am also interested in Database development and looking forward to learning more about AI infrastructure.
 
