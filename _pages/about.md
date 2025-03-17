@@ -25,7 +25,7 @@ I am willing to be contacted through wechat(fyx_04) or the social media listed!ð
 <sup>\*</sup> indicates equal contribution.
 
 ### 2025
-- AttentionRAG: Attention-Guided Context Pruning in Retrieval-Augmented Generation. **Yixiong Fang**, Tianran Sun, Yuling Shi, Xiaodong Gu. (in submission)
+- AttentionRAG: Attention-Guided Context Pruning in Retrieval-Augmented Generation. **Yixiong Fang**, Tianran Sun, Yuling Shi, Xiaodong Gu. (in submission) [![arXiv](https://img.shields.io/badge/arXiv-2503.10720-b31b1b)](https://arxiv.org/abs/2503.10720)
 - Enhancing Speech Large Language Models for Deepfake Speech and Audio Detection through Feature Dropout and Dropin. Yupei Li<sup>\*</sup>, **Yixiong Fang**<sup>\*</sup>, Lucia Specia, Xiaodong Gu, BjÃ¶rn Schuller. (in submission)
 
 ### 2024
