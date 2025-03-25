@@ -25,14 +25,14 @@ I am willing to be contacted through wechat(fyx_04) or the social media listed!�
 <sup>\*</sup> indicates equal contribution.
 
 ### 2025
-- AttentionRAG: Attention-Guided Context Pruning in Retrieval-Augmented Generation. **Yixiong Fang**, Tianran Sun, Yuling Shi, Xiaodong Gu. (in submission) [![arXiv](https://img.shields.io/badge/arXiv-2503.10720-b31b1b)](https://arxiv.org/abs/2503.10720)
-- Enhancing Speech Large Language Models for Deepfake Speech and Audio Detection through Feature Dropout and Dropin. Yupei Li<sup>\*</sup>, **Yixiong Fang**<sup>\*</sup>, Lucia Specia, Xiaodong Gu, Björn Schuller. (in submission)
+- AttentionRAG: Attention-Guided Context Pruning in Retrieval-Augmented Generation. **Yixiong Fang**, Tianran Sun, Yuling Shi, Xiaodong Gu. (preprint) [![arXiv](https://img.shields.io/badge/arXiv-2503.10720-b31b1b)](https://arxiv.org/abs/2503.10720)
+- Enhancing Speech Large Language Models for Deepfake Speech and Audio Detection through Feature Dropout and Dropin. Yupei Li<sup>\*</sup>, **Yixiong Fang**<sup>\*</sup>, Lucia Specia, Xiaodong Gu, Björn Schuller. 
 
 ### 2024
 - From Uncertainty to Trust: Enhancing Reliability in Vision-Language Models
   with Uncertainty-Guided Dropout Decoding. **Yixiong Fang**<sup>\*</sup>, Ziran Yang<sup>\*</sup>, Zhaorun Chen, Zhuokai Zhao<sup>†</sup>, Jiawei Zhou<sup>†</sup>. [![arXiv](https://img.shields.io/badge/arXiv-2412.06474-b31b1b)](https://arxiv.org/abs/2412.06474)
-  [![GitHub stars](https://badgen.net/github/stars/kigb/DropoutDecoding)](https://github.com/kigb/DropoutDecoding) (in submission)
-- CodeCipher: Learning to Obfuscate Source Code Against LLMs. With Yalan Lin, Chengcheng Wan and Xiaodong Gu. [![arXiv](https://img.shields.io/badge/arXiv-2410.05797-b31b1b)](https://arxiv.org/abs/2410.05797)[![Code](https://img.shields.io/badge/Code-Anon-blue)](https://anonymous.4open.science/r/CodeCipher_final-9D7E/README.md)  (in submission)
+  [![GitHub stars](https://badgen.net/github/stars/kigb/DropoutDecoding)](https://github.com/kigb/DropoutDecoding) (preprint)
+- CodeCipher: Learning to Obfuscate Source Code Against LLMs. With Yalan Lin, Chengcheng Wan and Xiaodong Gu. [![arXiv](https://img.shields.io/badge/arXiv-2410.05797-b31b1b)](https://arxiv.org/abs/2410.05797)[![Code](https://img.shields.io/badge/Code-Anon-blue)](https://anonymous.4open.science/r/CodeCipher_final-9D7E/README.md)  (preprint)
 
 - Efficient computation of eigenvalues in diffusion maps: A multi-strategy approach (SPML2024). **Yixiong Fang**<sup>\*</sup>, Weixi Yang, [![DOI](https://badgen.net/badge/DOI/10.54254%2F2755%2D2721%2F55%2F20241429/blue)](https://doi.org/10.54254/2755-2721/55/20241429)
 
