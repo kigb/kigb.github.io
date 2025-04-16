@@ -37,6 +37,7 @@ I am willing to be contacted through wechat(fyx_04) or the social media listed!ð
 - Efficient computation of eigenvalues in diffusion maps: A multi-strategy approach (SPML2024). **Yixiong Fang**<sup>\*</sup>, Weixi Yang, [![DOI](https://badgen.net/badge/DOI/10.54254%2F2755%2D2721%2F55%2F20241429/blue)](https://doi.org/10.54254/2755-2721/55/20241429)
 
 ## Teaching
+- Teaching Assistant for Mthread GPU Open Course (2025 Spring)
 - Teaching Assistant for AI1102: Intel's Cutting-Edge AI Algorithms and Practices (2025 Spring)
 - Teaching Assistant for SJTU Xuesen Challenge Winter Camp(AI) (2025 Winter)
 
