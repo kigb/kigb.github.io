@@ -25,7 +25,6 @@ I am willing to be contacted through wechat(fyx_04) or the social media listed!ð
 <sup>\*</sup> indicates equal contribution.
 
 ### 2025
-- Reasoning in Trees: Improving Retrieval-Augmented Generation for Multi-Hop Question Answering. Maolin Sun, Yuling Shi, Zijun Liu, Yixiong Fang, Tianran Sun, Xiaodong Gu
 - LastingBench: Defend Benchmarks Against Knowledge Leakage. **Yixiong Fang**<sup>\*</sup>, Tianran Sun<sup>\*</sup>, Yuling Shi, Min Wang, Xiaodong Gu.
 - AttentionRAG: Attention-Guided Context Pruning in Retrieval-Augmented Generation. **Yixiong Fang**, Tianran Sun, Yuling Shi, Xiaodong Gu. (preprint) [![arXiv](https://img.shields.io/badge/arXiv-2503.10720-b31b1b)](https://arxiv.org/abs/2503.10720)
 - Enhancing Speech Large Language Models for Deepfake Speech and Audio Detection through Feature Dropout and Dropin. Yupei Li<sup>\*</sup>, **Yixiong Fang**<sup>\*</sup>, Lucia Specia, Xiaodong Gu, BjÃ¶rn Schuller. 
