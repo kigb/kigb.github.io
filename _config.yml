@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Yixiong's Homepage'"
+title                    : "Yixiong Fang"
 title_separator          : "-"
 name                     : &name "Yixiong Fang"
 description              : &description "personal description"
@@ -25,8 +25,8 @@ author:
   name             : "Yixiong Fang"
   pronouns         : # example: "she/her"  
   bio              : "CMU SCS LTI 27' | SJTU SE 25'"
-  location         : "Shanghai, China"
-  employer         : "Shanghai Jiao Tong University"
+  location         : "Pittsburgh, PA"
+  employer         : "Carnegie Mellon University"
   uri              : # URL
   email            : "kfangyixiong@gmail.com" 
 
@@ -58,7 +58,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "https://www.linkedin.com/in/yixiong-fang-503a45333"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username

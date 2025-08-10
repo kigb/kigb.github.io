@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Hi there, I'm Yixiong Fang👋🏼"
+title: "Yixiong Fang"
 author_profile: true
 redirect_from: 
   - /about/
@@ -15,7 +15,7 @@ I am currently working on Large Language Models in the field of multi-modalities
 I am willing to be contacted through wechat(fyx_04) or the social media listed!👏🏼
 
 ## Work Experience
-- Emagen AI, Tech Leader(current)
+- Emagen AI, Head of North America (current)
 - Ant Group Co., Ltd., OceanBase, SQL Intern (2024.7 ~ 2024.8)
 - Step AI Intern (2024.3 ~ 2024.6)
 - China Merchants Securities Co., Ltd. Quant Intern (2024.1 ~ 2024.2)
@@ -33,7 +33,7 @@ I am willing to be contacted through wechat(fyx_04) or the social media listed!�
 ### 2024
 - From Uncertainty to Trust: Enhancing Reliability in Vision-Language Models
   with Uncertainty-Guided Dropout Decoding. **Yixiong Fang**<sup>\*</sup>, Ziran Yang<sup>\*</sup>, Zhaorun Chen, Zhuokai Zhao<sup>†</sup>, Jiawei Zhou<sup>†</sup>. [![arXiv](https://img.shields.io/badge/arXiv-2412.06474-b31b1b)](https://arxiv.org/abs/2412.06474)
-  [![GitHub stars](https://badgen.net/github/stars/kigb/DropoutDecoding)](https://github.com/kigb/DropoutDecoding) (preprint)
+  [![GitHub stars](https://img.shields.io/github/stars/kigb/DropoutDecoding?style=flat&logo=github)](https://github.com/kigb/DropoutDecoding) (preprint)
 - CodeCipher: Learning to Obfuscate Source Code Against LLMs. With Yalan Lin, Chengcheng Wan and Xiaodong Gu. [![arXiv](https://img.shields.io/badge/arXiv-2410.05797-b31b1b)](https://arxiv.org/abs/2410.05797)[![Code](https://img.shields.io/badge/Code-Anon-blue)](https://anonymous.4open.science/r/CodeCipher_final-9D7E/README.md)  (preprint)
 
 - Efficient computation of eigenvalues in diffusion maps: A multi-strategy approach (SPML2024). **Yixiong Fang**<sup>\*</sup>, Weixi Yang, [![DOI](https://badgen.net/badge/DOI/10.54254%2F2755%2D2721%2F55%2F20241429/blue)](https://doi.org/10.54254/2755-2721/55/20241429)
@@ -44,5 +44,5 @@ I am willing to be contacted through wechat(fyx_04) or the social media listed!�
 - Teaching Assistant for SJTU Xuesen Challenge Winter Camp(AI) (2025 Winter)
 
 ## Open Source Projects
-- **MathTranslate** [![GitHub stars](https://badgen.net/github/stars/SUSYUSTC/MathTranslate)](https://github.com/SUSYUSTC/MathTranslate)
-- **OceanBase** [![GitHub stars](https://badgen.net/github/stars/oceanbase/oceanbase)](https://github.com/oceanbase/oceanbase)
+- **MathTranslate** [![GitHub stars](https://img.shields.io/github/stars/SUSYUSTC/MathTranslate?style=flat&logo=github)](https://github.com/SUSYUSTC/MathTranslate)
+- **OceanBase** [![GitHub stars](https://img.shields.io/github/stars/oceanbase/oceanbase?style=flat&logo=github)](https://github.com/oceanbase/oceanbase)
