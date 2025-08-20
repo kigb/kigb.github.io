@@ -10,8 +10,7 @@ I am 21 years old, interested in 📸photographing, 🎺playing trumpet,🎮play
 
 I am currently a fourth-year undergraduate student at **SJTU SE**, and will graduate in 2025. I will soon be starting my Master's program at **CMU SCS LTI** .
 
-I am currently working on Large Language Models in the field of multi-modalities, code generation and prompt engineering. Moreover, I am also interested in Database development and looking forward to learning more about AI infrastructure.
-
+I am currently working on LLM Agents, and I am open to any research topics.
 I am willing to be contacted through wechat(fyx_04) or the social media listed!👏🏼
 
 ## Work Experience
@@ -26,8 +25,8 @@ I am willing to be contacted through wechat(fyx_04) or the social media listed!�
 
 ### 2025
 - A Survey of Self-Evolving Agents: On Path to Artificial Super Intelligence. Huan-ang Gao<sup>\*</sup>, Jiayi Geng<sup>\*</sup>, Wenyue Hua<sup>\*</sup>, Mengkang Hu<sup>\*</sup>, Xinzhe Juan<sup>\*</sup>, Hongzhang Liu<sup>\*</sup>, Shilong Liu<sup>\*</sup>, Jiahao Qiu<sup>\*</sup>, Xuan Qi<sup>\*</sup>, Yifan Wu<sup>\*</sup>, Hongru Wang<sup>\*</sup>, Han Xiao<sup>\*</sup>, Yuhang Zhou<sup>\*</sup>, Shaokun Zhang<sup>\*</sup>, Jiayi Zhang, Jinyu Xiang, **Yixiong Fang**, Qiwen Zhao, Dongrui Liu, Qihan Ren, Cheng Qian, Zhenhailong Wang, Minda Hu, Huazheng Wang, Qingyun Wu, Heng Ji, Mengdi Wang<sup>†</sup>. [![arXiv](https://img.shields.io/badge/arXiv-2507.21046-b31b1b)](https://arxiv.org/abs/2507.21046) [![GitHub stars](https://img.shields.io/github/stars/CharlesQ9/Self-Evolving-Agents?style=flat&logo=github)](https://github.com/CharlesQ9/Self-Evolving-Agents)
-- LastingBench: Defend Benchmarks Against Knowledge Leakage. **Yixiong Fang**<sup>\*</sup>, Tianran Sun<sup>\*</sup>, Yuling Shi, Min Wang, Xiaodong Gu<sup>†</sup>. [![arXiv](https://img.shields.io/badge/arXiv-2506.21614-b31b1b)](https://arxiv.org/abs/2506.21614) [![GitHub stars](https://img.shields.io/github/stars/Seriousss/LastingBench?style=flat&logo=github)](https://github.com/Seriousss/LastingBench) 
-- AttentionRAG: Attention-Guided Context Pruning in Retrieval-Augmented Generation. **Yixiong Fang**, Tianran Sun, Yuling Shi, Xiaodong Gu. (ACL Workshop) [![arXiv](https://img.shields.io/badge/arXiv-2503.10720-b31b1b)](https://arxiv.org/abs/2503.10720)
+- LastingBench: Defend Benchmarks Against Knowledge Leakage. **Yixiong Fang**<sup>\*</sup>, Tianran Sun<sup>\*</sup>, Yuling Shi, Min Wang, Xiaodong Gu<sup>†</sup>.(EMNLP 2025) [![arXiv](https://img.shields.io/badge/arXiv-2506.21614-b31b1b)](https://arxiv.org/abs/2506.21614) [![GitHub stars](https://img.shields.io/github/stars/Seriousss/LastingBench?style=flat&logo=github)](https://github.com/Seriousss/LastingBench) 
+- AttentionRAG: Attention-Guided Context Pruning in Retrieval-Augmented Generation. **Yixiong Fang**, Tianran Sun, Yuling Shi, Xiaodong Gu. (ACL2025 Workshop) [![arXiv](https://img.shields.io/badge/arXiv-2503.10720-b31b1b)](https://arxiv.org/abs/2503.10720)
 - Enhancing Speech Large Language Models for Deepfake Speech and Audio Detection through Feature Dropout and Dropin. Yupei Li<sup>\*</sup>, **Yixiong Fang**<sup>\*</sup>, Lucia Specia, Xiaodong Gu, Björn Schuller. 
 
 ### 2024
