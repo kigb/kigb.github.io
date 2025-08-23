@@ -16,42 +16,7 @@ My research focuses on the intersection of LLMs and Agents. I am particularly in
 - **Multi-modal Foundation Models**
 - **Trustworthy AI**
 
-I am actively seeking research collaborations and am open to exploring new frontiers in artificial intelligence.
-
-## Work Experience
-
-### Emagen AI (Startup)
-**Head of North America** | *Current Position*  
-
-**TL;DR:** Leading the development of Cagen, an AI-native user based organization platform.
-
----
-
-### Ant Group Co., Ltd. - OceanBase
-**SQL Intern** | *July 2024 - August 2024*  
-
-**TL;DR:** Optimized utf8 parsing with SIMD for up to 20x performance increase, add southeast Asia region chatset, add user friendly external table feature.
-
----
-
-### Step AI
-**AI Research Intern** | *March 2024 - June 2024*  
-
-**TL;DR:** Develop the early stage agent, including tools(like weathers) and RAG system; develop the openapi platform of Step AI.
-
----
-
-### China Merchants Securities Co., Ltd.
-**Quantitative Research Intern** | *January 2024 - February 2024*  
-
-**TL;DR:** Built quantitative trading strategies and performed market analysis using machine learning techniques.
-
----
-
-### Changjiang Securities International
-**Quantitative Research Intern** | *July 2022 - August 2022*  
-
-**TL;DR:** Developed algorithmic trading models and conducted financial data analysis for equity markets.
+I am actively seeking research opportunities on Agent systems and willing to be open to any research topics for directed study or RA!
 
 ## Papers
 <sup>\*</sup> indicates equal contribution, <sup>†</sup> indicates corresponding author.
@@ -110,6 +75,41 @@ Yalan Lin, Chengcheng Wan, **Yixiong Fang**, Xiaodong Gu | *Preprint*
 
 **TL;DR:** Multi-strategy approach for efficient eigenvalue computation in diffusion maps, improving computational performance.  
 [![DOI](https://badgen.net/badge/DOI/10.54254%2F2755%2D2721%2F55%2F20241429/blue)](https://doi.org/10.54254/2755-2721/55/20241429)
+
+## Work Experience
+
+### Emagen AI (Startup)
+**Head of North America** | *Current Position*  
+
+**TL;DR:** Leading the development of Cagen, an AI-native user based organization platform.
+
+---
+
+### Ant Group Co., Ltd. - OceanBase
+**SQL Intern** | *July 2024 - August 2024*  
+
+**TL;DR:** Optimized utf8 parsing with SIMD for up to 20x performance increase, add southeast Asia region chatset, add user friendly external table feature.
+
+---
+
+### Step AI
+**AI Research Intern** | *March 2024 - June 2024*  
+
+**TL;DR:** Develop the early stage agent, including tools(like weathers) and RAG system; develop the openapi platform of Step AI.
+
+---
+
+### China Merchants Securities Co., Ltd.
+**Quantitative Research Intern** | *January 2024 - February 2024*  
+
+**TL;DR:** Built quantitative trading strategies and performed market analysis using machine learning techniques.
+
+---
+
+### Changjiang Securities International
+**Quantitative Research Intern** | *July 2022 - August 2022*  
+
+**TL;DR:** Developed algorithmic trading models and conducted financial data analysis for equity markets.
 
 ## Teaching
 - Teaching Assistant for Mthread GPU Open Course (2025 Spring)
