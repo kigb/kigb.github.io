@@ -37,7 +37,7 @@ I am actively seeking research collaborations and am open to exploring new front
 ### Step AI
 **AI Research Intern** | *March 2024 - June 2024*  
 
-**TL;DR:** Develop the early stage agent, including tools(like weathers) and RAG system; deveop the openapi platform of Step AI.
+**TL;DR:** Develop the early stage agent, including tools(like weathers) and RAG system; develop the openapi platform of Step AI.
 
 ---
 
