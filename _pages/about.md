@@ -6,7 +6,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a new master student at Carnegie Mellon University, Language Technologies Institue(MIIS). Before that, I recieved my bachlor degree at Shanghai Jiao Tong University, majoring in Software Engineering.
+I am a new master student at *Carnegie Mellon University, Language Technologies Institue(MIIS)*. Before that, I recieved my bachlor degree at *Shanghai Jiao Tong University*, majoring in *Software Engineering*.
 
 ## Research Interests
 
