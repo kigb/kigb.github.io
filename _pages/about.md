@@ -55,7 +55,7 @@ Yupei Li<sup>\*</sup>, **Yixiong Fang**<sup>\*</sup>, Lucia Specia, Xiaodong Gu,
 ### 2024
 
 **From Uncertainty to Trust: Enhancing Reliability in Vision-Language Models with Uncertainty-Guided Dropout Decoding**  
-**Yixiong Fang**<sup>\*</sup>, Ziran Yang<sup>\*</sup>, Zhaorun Chen, Zhuokai Zhao<sup>†</sup>, Jiawei Zhou<sup>†</sup> | *Preprint*  
+**Yixiong Fang**<sup>\*</sup>, Ziran Yang<sup>\*</sup>, Zhaorun Chen, Zhuokai Zhao<sup>†</sup>, Jiawei Zhou<sup>†</sup> | *NeurIPS 2025*
 
 **TL;DR:** Novel decoding strategy using uncertainty-guided dropout to improve VLM reliability and reduce hallucinations.  
 [![arXiv](https://img.shields.io/badge/arXiv-2412.06474-b31b1b)](https://arxiv.org/abs/2412.06474) [![GitHub stars](https://img.shields.io/github/stars/kigb/DropoutDecoding?style=flat&logo=github)](https://github.com/kigb/DropoutDecoding)
