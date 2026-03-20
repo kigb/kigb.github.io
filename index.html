@@ -4,776 +4,644 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yixiong Fang</title>
-  <meta name="description" content="Yixiong Fang - Master student at CMU LTI. Research in LLM Agents, Multi-modal Models, and Trustworthy AI.">
+  <meta name="description" content="Yixiong Fang - Master student at CMU LTI. Research in LLM Agents.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0a0a0b;
-      --bg-card: #111113;
-      --bg-card-hover: #18181b;
-      --border: #27272a;
-      --text: #fafafa;
-      --text-secondary: #a1a1aa;
-      --text-muted: #71717a;
-      --accent: #6366f1;
-      --accent-light: #818cf8;
-      --accent-glow: rgba(99, 102, 241, 0.15);
-      --green: #34d399;
-      --tag-bg: #1e1e24;
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --text-secondary: #4a4a4a;
+      --text-muted: #888888;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --border: #e5e5e5;
+      --border-light: #f0f0f0;
+      --venue-bg: #f0f7ff;
+      --venue-text: #2563eb;
+      --tag-bg: #f5f5f5;
+      --sidebar-bg: #fafafa;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-      scrollbar-width: thin;
-      scrollbar-color: var(--border) var(--bg);
-    }
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.7;
+      line-height: 1.75;
       -webkit-font-smoothing: antialiased;
+      font-size: 16px;
     }
 
     ::selection {
-      background: var(--accent);
-      color: white;
+      background: rgba(37, 99, 235, 0.15);
+      color: var(--text);
     }
 
     a {
-      color: var(--accent-light);
+      color: var(--accent);
       text-decoration: none;
-      transition: color 0.2s;
+      transition: color 0.15s;
     }
-    a:hover { color: var(--accent); }
+    a:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
 
-    /* ── Nav ── */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 100;
-      background: rgba(10, 10, 11, 0.8);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-inner {
-      max-width: 900px;
+    /* ── Main Layout ── */
+    .page {
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 0 2rem;
-      height: 56px;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .nav-logo {
-      font-weight: 600;
-      font-size: 1rem;
-      color: var(--text);
-      letter-spacing: -0.02em;
-    }
-    .nav-links { display: flex; gap: 1.5rem; }
-    .nav-links a {
-      color: var(--text-secondary);
-      font-size: 0.85rem;
-      font-weight: 400;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--text); }
-
-    /* ── Layout ── */
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    section {
-      padding: 5rem 0;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ── Hero ── */
-    .hero {
+      gap: 4rem;
+      padding: 3rem 2rem;
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding-top: 56px;
-    }
-    .hero-content {
-      display: flex;
-      align-items: center;
-      gap: 3rem;
-      width: 100%;
-    }
-    .hero-avatar {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--border);
-      flex-shrink: 0;
-      transition: border-color 0.3s;
-    }
-    .hero-avatar:hover {
-      border-color: var(--accent);
-    }
-    .hero-text { flex: 1; }
-    .hero-name {
-      font-size: 2.5rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      line-height: 1.2;
-      background: linear-gradient(135deg, var(--text) 0%, var(--text-secondary) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .hero-title {
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      margin-top: 0.5rem;
-      font-weight: 400;
-    }
-    .hero-affiliation {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      margin-top: 0.75rem;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      font-family: 'JetBrains Mono', monospace;
-    }
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--green);
-      animation: pulse 2s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
-    .hero-links {
-      display: flex;
-      gap: 0.75rem;
-      margin-top: 1.25rem;
-      flex-wrap: wrap;
-    }
-    .hero-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.4rem 0.85rem;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-      transition: all 0.2s;
-      font-family: 'JetBrains Mono', monospace;
-    }
-    .hero-link:hover {
-      border-color: var(--accent);
-      color: var(--text);
-      background: var(--accent-glow);
-    }
-    .hero-link svg {
-      width: 14px;
-      height: 14px;
     }
 
-    /* ── Section titles ── */
-    .section-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--accent-light);
-      margin-bottom: 0.5rem;
+    /* ── Sidebar ── */
+    .sidebar {
+      width: 240px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 2rem;
+      align-self: flex-start;
     }
-    .section-title {
-      font-size: 1.5rem;
-      font-weight: 600;
+    .sidebar-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 12px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .sidebar-name {
+      font-size: 1.4rem;
+      font-weight: 700;
       letter-spacing: -0.02em;
-      margin-bottom: 2rem;
+      line-height: 1.3;
+      color: var(--text);
+    }
+    .sidebar-role {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      margin-top: 0.25rem;
+      line-height: 1.5;
+    }
+    .sidebar-affil {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+    .sidebar-links {
+      margin-top: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .sidebar-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      padding: 0.3rem 0;
+      transition: color 0.15s;
+    }
+    .sidebar-link:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .sidebar-link svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      opacity: 0.55;
+    }
+    .sidebar-link:hover svg {
+      opacity: 1;
+    }
+
+    .sidebar-nav {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .sidebar-nav a {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      padding: 0.25rem 0;
+      transition: color 0.15s;
+    }
+    .sidebar-nav a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    /* ── Content ── */
+    .content {
+      flex: 1;
+      min-width: 0;
+      padding-top: 0.5rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--text);
+      display: inline-block;
     }
 
     /* ── About ── */
-    .about-text {
+    .about p {
       color: var(--text-secondary);
-      font-size: 1rem;
-      line-height: 1.8;
-      max-width: 680px;
+      font-size: 0.98rem;
+      margin-bottom: 0.6rem;
+    }
+    .about p strong {
+      color: var(--text);
+      font-weight: 600;
     }
     .interests {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1.25rem;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
     }
     .interest-tag {
-      padding: 0.35rem 0.75rem;
+      font-family: 'Inter', sans-serif;
+      padding: 0.25rem 0.6rem;
       background: var(--tag-bg);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      font-size: 0.8rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
       color: var(--text-secondary);
-      font-family: 'JetBrains Mono', monospace;
-      transition: all 0.2s;
-    }
-    .interest-tag:hover {
-      border-color: var(--accent);
-      color: var(--accent-light);
+      letter-spacing: 0.01em;
     }
 
     /* ── Publications ── */
-    .pub-year {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
+    .pub-year-heading {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
       color: var(--text-muted);
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border);
+      margin-top: 1.75rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.03em;
     }
-    .pub-year:first-of-type { margin-top: 0; }
+    .pub-year-heading:first-of-type {
+      margin-top: 0.5rem;
+    }
 
     .pub-item {
-      padding: 1.25rem;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      margin-bottom: 0.75rem;
-      transition: all 0.2s;
-      background: var(--bg-card);
+      margin-bottom: 1.25rem;
+      padding-left: 0.75rem;
+      border-left: 2px solid transparent;
+      transition: border-color 0.2s;
     }
     .pub-item:hover {
-      border-color: var(--accent);
-      background: var(--bg-card-hover);
-      box-shadow: 0 0 20px var(--accent-glow);
+      border-left-color: var(--accent);
     }
     .pub-title {
       font-size: 0.95rem;
       font-weight: 600;
-      line-height: 1.4;
-      margin-bottom: 0.4rem;
+      line-height: 1.45;
+      color: var(--text);
     }
     .pub-authors {
-      font-size: 0.82rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
       color: var(--text-muted);
       line-height: 1.5;
+      margin-top: 0.15rem;
     }
     .pub-authors .me {
-      color: var(--accent-light);
-      font-weight: 500;
+      color: var(--text);
+      font-weight: 600;
     }
-    .pub-meta {
+    .pub-detail {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      margin-top: 0.6rem;
+      gap: 0.6rem;
+      margin-top: 0.3rem;
       flex-wrap: wrap;
     }
     .pub-venue {
-      font-size: 0.78rem;
-      font-family: 'JetBrains Mono', monospace;
-      color: var(--green);
-      background: rgba(52, 211, 153, 0.1);
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
-    }
-    .pub-tldr {
-      font-size: 0.82rem;
-      color: var(--text-secondary);
-      margin-top: 0.5rem;
-      font-style: italic;
-    }
-    .pub-links {
-      display: flex;
-      gap: 0.5rem;
-      margin-top: 0.6rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--venue-text);
+      background: var(--venue-bg);
+      padding: 0.15rem 0.45rem;
+      border-radius: 3px;
+      letter-spacing: 0.02em;
     }
     .pub-link {
-      font-size: 0.75rem;
-      font-family: 'JetBrains Mono', monospace;
-      padding: 0.2rem 0.5rem;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      color: var(--text-secondary);
-      transition: all 0.2s;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      color: var(--accent);
+      padding: 0.1rem 0;
     }
     .pub-link:hover {
-      border-color: var(--accent);
-      color: var(--accent-light);
+      text-decoration: underline;
     }
     .pub-link .star-count {
-      margin-left: 0.3rem;
+      margin-left: 0.2rem;
       color: var(--text-muted);
     }
     .pub-link .star-icon {
       display: inline-block;
-      width: 12px;
-      height: 12px;
+      width: 11px;
+      height: 11px;
       vertical-align: -1px;
-      margin-right: 0.15rem;
+      margin-right: 0.1rem;
+    }
+    .pub-sep {
+      color: var(--border);
+      font-size: 0.7rem;
     }
 
     /* ── Experience ── */
-    .exp-list { display: flex; flex-direction: column; gap: 0.75rem; }
     .exp-item {
-      padding: 1.25rem;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: var(--bg-card);
-      transition: all 0.2s;
+      margin-bottom: 1rem;
+      padding-left: 0.75rem;
+      border-left: 2px solid var(--border-light);
     }
-    .exp-item:hover {
-      border-color: var(--accent);
-      background: var(--bg-card-hover);
-    }
-    .exp-header {
+    .exp-top {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       gap: 1rem;
     }
     .exp-role {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 600;
+      color: var(--text);
     }
     .exp-date {
-      font-size: 0.78rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
       color: var(--text-muted);
-      font-family: 'JetBrains Mono', monospace;
       white-space: nowrap;
     }
     .exp-company {
-      font-size: 0.85rem;
-      color: var(--accent-light);
-      margin-top: 0.2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      color: var(--accent);
     }
+    .exp-company a { color: var(--accent); }
     .exp-desc {
       font-size: 0.85rem;
-      color: var(--text-secondary);
-      margin-top: 0.4rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
     }
 
     /* ── Teaching ── */
-    .teaching-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
     .teaching-item {
-      padding: 0.75rem 1rem;
-      border-left: 2px solid var(--border);
-      transition: border-color 0.2s;
-    }
-    .teaching-item:hover {
-      border-color: var(--accent);
+      margin-bottom: 0.6rem;
+      padding-left: 0.75rem;
+      border-left: 2px solid var(--border-light);
     }
     .teaching-name {
       font-size: 0.9rem;
       font-weight: 500;
+      color: var(--text);
     }
     .teaching-meta {
-      font-size: 0.8rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
       color: var(--text-muted);
-      font-family: 'JetBrains Mono', monospace;
-    }
-
-    /* ── Open Source ── */
-    .oss-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 0.75rem;
-    }
-    .oss-item {
-      padding: 1.25rem;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: var(--bg-card);
-      transition: all 0.2s;
-    }
-    .oss-item:hover {
-      border-color: var(--accent);
-      background: var(--bg-card-hover);
-    }
-    .oss-name {
-      font-size: 0.95rem;
-      font-weight: 600;
-      font-family: 'JetBrains Mono', monospace;
-    }
-    .oss-desc {
-      font-size: 0.82rem;
-      color: var(--text-secondary);
-      margin-top: 0.3rem;
     }
 
     /* ── Footer ── */
     footer {
-      border-top: 1px solid var(--border);
-      padding: 2rem 0;
-      text-align: center;
-      font-size: 0.8rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
       color: var(--text-muted);
-      font-family: 'JetBrains Mono', monospace;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
     }
 
     /* ── Responsive ── */
-    @media (max-width: 640px) {
-      .hero-content {
+    @media (max-width: 768px) {
+      .page {
         flex-direction: column;
-        text-align: center;
+        gap: 2rem;
+        padding: 1.5rem 1.25rem;
       }
-      .hero-avatar { width: 120px; height: 120px; }
-      .hero-name { font-size: 1.8rem; }
-      .hero-links { justify-content: center; }
-      .interests { justify-content: center; }
-      .exp-header { flex-direction: column; gap: 0.2rem; }
-      .nav-links { gap: 1rem; }
-      .container { padding: 0 1.25rem; }
-      section { padding: 3rem 0; }
+      .sidebar {
+        width: 100%;
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+        align-items: center;
+      }
+      .sidebar-photo {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 0;
+      }
+      .sidebar-info { flex: 1; min-width: 200px; }
+      .sidebar-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 0.75rem;
+      }
+      .sidebar-nav {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 1rem;
+        padding-top: 1rem;
+      }
+      .exp-top { flex-direction: column; gap: 0; }
     }
 
-    /* ── Grain overlay ── */
-    body::after {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1000;
-      opacity: 0.03;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    /* ── Animations ── */
+    .section {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
 <body>
 
-  <!-- Nav -->
-  <nav>
-    <div class="nav-inner">
-      <span class="nav-logo">Y. Fang</span>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#publications">Papers</a>
-        <a href="#experience">Experience</a>
-        <a href="#teaching">Teaching</a>
+  <div class="page">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <img src="selfee.jpg" alt="Yixiong Fang" class="sidebar-photo">
+      <div class="sidebar-info">
+        <h1 class="sidebar-name">Yixiong Fang</h1>
+        <p class="sidebar-role">Master Student, LTI</p>
+        <p class="sidebar-affil">Carnegie Mellon University</p>
+        <div class="sidebar-links">
+          <a href="mailto:kfangyixiong@gmail.com" class="sidebar-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
+          </a>
+          <a href="https://github.com/kigb" target="_blank" class="sidebar-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://scholar.google.com/citations?user=YUTKbZUAAAAJ" target="_blank" class="sidebar-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 107 7 7 7 0 00-7-7z"/></svg>
+            Google Scholar
+          </a>
+          <a href="https://www.linkedin.com/in/yixiong-fang-503a45333" target="_blank" class="sidebar-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+        <nav class="sidebar-nav">
+          <a href="#about">About</a>
+          <a href="#publications">Publications</a>
+          <a href="#experience">Experience</a>
+          <a href="#teaching">Teaching</a>
+        </nav>
       </div>
-    </div>
-  </nav>
+    </aside>
 
-  <!-- Hero -->
-  <section class="hero visible" id="top">
-    <div class="container">
-      <div class="hero-content">
-        <img src="selfee.jpg" alt="Yixiong Fang" class="hero-avatar">
-        <div class="hero-text">
-          <h1 class="hero-name">Yixiong Fang</h1>
-          <p class="hero-title">Master Student · LLM Agents · Application & Evaluation</p>
-          <div class="hero-affiliation">
-            <span class="status-dot"></span>
-            <span>CMU LTI '27 &nbsp;|&nbsp; SJTU SE '25</span>
+    <!-- Content -->
+    <main class="content">
+
+      <!-- About -->
+      <div class="section about" id="about">
+        <h2 class="section-title">About</h2>
+        <p>
+          I am a master student in <strong>Master of Intelligent Information Systems (MIIS)</strong> at <strong>Carnegie Mellon University, Language Technologies Institute</strong>, directed by <a href="https://www.cs.cmu.edu/~atalwalk/" target="_blank">Prof. Ameet Talwalkar</a>.
+          Before that, I received my bachelor's degree at <strong>Shanghai Jiao Tong University</strong>, majoring in Software Engineering, guided by <a href="https://guxd.github.io/" target="_blank">Prof. Xiaodong Gu</a>.
+        </p>
+        <p>
+          I am interested in both <strong>research</strong> and <strong>engineering</strong>. I previously interned at <a href="https://en.oceanbase.com/" target="_blank">Ant Group (OceanBase)</a> and <a href="https://www.stepfun.com/" target="_blank">StepFun AI</a>, and co-founded <a href="https://cagen.ai" target="_blank">Emagen AI</a>. This summer, I will join <a href="https://www.jumptrading.com/" target="_blank">Jump Trading</a> as a research intern.
+        </p>
+        <p>
+          My research focuses on <strong>LLM Agents</strong>, spanning both application and evaluation.
+        </p>
+        <div class="interests">
+          <span class="interest-tag">LLM Agents</span>
+          <span class="interest-tag">Agent Application</span>
+          <span class="interest-tag">Agent Evaluation</span>
+          <span class="interest-tag">Multi-modal Models</span>
+          <span class="interest-tag">Trustworthy AI</span>
+        </div>
+      </div>
+
+      <!-- Publications -->
+      <div class="section" id="publications">
+        <h2 class="section-title">Publications</h2>
+        <p style="font-family: 'Inter', sans-serif; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.75rem;">* equal contribution &nbsp;&middot;&nbsp; &dagger; corresponding author</p>
+
+        <div class="pub-year-heading">2026</div>
+
+        <div class="pub-item">
+          <div class="pub-title">A Survey of Self-Evolving Agents: On Path to Artificial Super Intelligence</div>
+          <div class="pub-authors">Huan-ang Gao*, Jiayi Geng*, Wenyue Hua*, ..., <span class="me">Yixiong Fang</span>, ..., Mengdi Wang&dagger;</div>
+          <div class="pub-detail">
+            <span class="pub-venue">TMLR 2026</span>
+            <a href="https://arxiv.org/abs/2507.21046" target="_blank" class="pub-link">arXiv</a>
+            <span class="pub-sep">&middot;</span>
+            <a href="https://github.com/CharlesQ9/Self-Evolving-Agents" target="_blank" class="pub-link">Code</a>
           </div>
-          <div class="hero-links">
-            <a href="mailto:kfangyixiong@gmail.com" class="hero-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              Email
-            </a>
-            <a href="https://github.com/kigb" target="_blank" class="hero-link">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              GitHub
-            </a>
-            <a href="https://scholar.google.com/citations?user=YUTKbZUAAAAJ" target="_blank" class="hero-link">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 107 7 7 7 0 00-7-7z"/></svg>
-              Scholar
-            </a>
-            <a href="https://www.linkedin.com/in/yixiong-fang-503a45333" target="_blank" class="hero-link">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              LinkedIn
-            </a>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Reasoning in Trees: Improving Retrieval-Augmented Generation for Multi-Hop Question Answering</div>
+          <div class="pub-authors">Yuling Shi, Maolin Sun, Zijun Liu, Mo Yang, <span class="me">Yixiong Fang</span>, Tianran Sun, Xiaodong Gu</div>
+          <div class="pub-detail">
+            <span class="pub-venue">WWW 2026 Companion</span>
+            <a href="https://arxiv.org/abs/2601.11255" target="_blank" class="pub-link">arXiv</a>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">GameDevBench: Evaluating Agentic Capabilities Through Game Development</div>
+          <div class="pub-authors">Wayne Chi, <span class="me">Yixiong Fang</span>, Arnav Yayavaram, Siddharth Yayavaram, Seth Karten, Qiuhong Anna Wei, Runkun Chen, Alexander Wang, Valerie Chen, Ameet Talwalkar, Chris Donahue</div>
+          <div class="pub-detail">
+            <a href="https://arxiv.org/abs/2602.11103" target="_blank" class="pub-link">arXiv</a>
+            <span class="pub-sep">&middot;</span>
+            <a href="https://github.com/waynchi/gamedevbench" target="_blank" class="pub-link">Code</a>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Test vs Mutant: Adversarial LLM Agents for Robust Unit Test Generation</div>
+          <div class="pub-authors">Pengyu Chang, <span class="me">Yixiong Fang</span>, Silin Chen, Yuling Shi, Beijun Shen, Xiaodong Gu</div>
+          <div class="pub-detail">
+            <a href="https://arxiv.org/abs/2602.08146" target="_blank" class="pub-link">arXiv</a>
+          </div>
+        </div>
+
+        <div class="pub-year-heading">2025</div>
+
+        <div class="pub-item">
+          <div class="pub-title">From Uncertainty to Trust: Enhancing Reliability in Vision-Language Models with Uncertainty-Guided Dropout Decoding</div>
+          <div class="pub-authors"><span class="me">Yixiong Fang*</span>, Ziran Yang*, Zhaorun Chen, Zhuokai Zhao&dagger;, Jiawei Zhou&dagger;</div>
+          <div class="pub-detail">
+            <span class="pub-venue">NeurIPS 2025</span>
+            <a href="https://arxiv.org/abs/2412.06474" target="_blank" class="pub-link">arXiv</a>
+            <span class="pub-sep">&middot;</span>
+            <a href="https://github.com/kigb/DropoutDecoding" target="_blank" class="pub-link">Code</a>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">LastingBench: Defend Benchmarks Against Knowledge Leakage</div>
+          <div class="pub-authors"><span class="me">Yixiong Fang*</span>, Tianran Sun*, Yuling Shi, Min Wang, Xiaodong Gu&dagger;</div>
+          <div class="pub-detail">
+            <span class="pub-venue">EMNLP 2025 Findings</span>
+            <a href="https://arxiv.org/abs/2506.21614" target="_blank" class="pub-link">arXiv</a>
+            <span class="pub-sep">&middot;</span>
+            <a href="https://github.com/Seriousss/LastingBench" target="_blank" class="pub-link">Code</a>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">AttentionRAG: Attention-Guided Context Pruning in Retrieval-Augmented Generation</div>
+          <div class="pub-authors"><span class="me">Yixiong Fang</span>, Tianran Sun, Yuling Shi, Xiaodong Gu</div>
+          <div class="pub-detail">
+            <span class="pub-venue">ACL 2025 Workshop</span>
+            <a href="https://arxiv.org/abs/2503.10720" target="_blank" class="pub-link">arXiv</a>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Enhancing Speech Large Language Models for Deepfake Speech and Audio Detection through Feature Dropout and Dropin</div>
+          <div class="pub-authors">Yupei Li*, <span class="me">Yixiong Fang*</span>, Lucia Specia, Xiaodong Gu, Bj&ouml;rn Schuller</div>
+        </div>
+
+        <div class="pub-year-heading">2024</div>
+
+        <div class="pub-item">
+          <div class="pub-title">CodeCipher: Learning to Obfuscate Source Code Against LLMs</div>
+          <div class="pub-authors">Yalan Lin, Chengcheng Wan, <span class="me">Yixiong Fang</span>, Xiaodong Gu</div>
+          <div class="pub-detail">
+            <a href="https://arxiv.org/abs/2410.05797" target="_blank" class="pub-link">arXiv</a>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Efficient Computation of Eigenvalues in Diffusion Maps: A Multi-Strategy Approach</div>
+          <div class="pub-authors"><span class="me">Yixiong Fang*</span>, Weixi Yang</div>
+          <div class="pub-detail">
+            <span class="pub-venue">SPML 2024</span>
+            <a href="https://doi.org/10.54254/2755-2721/55/20241429" target="_blank" class="pub-link">DOI</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- About -->
-  <section id="about">
-    <div class="container">
-      <p class="section-label">// about</p>
-      <h2 class="section-title">About Me</h2>
-      <p class="about-text">
-        I am a master student in <strong>Master of Intelligent Information Systems (MIIS)</strong> at <strong>Carnegie Mellon University, Language Technologies Institute</strong>, directed by <a href="https://www.cs.cmu.edu/~atalwalk/" target="_blank">Prof. Ameet Talwalkar</a>.
-        Before that, I received my bachelor's degree at <strong>Shanghai Jiao Tong University</strong>, majoring in Software Engineering, guided by <a href="https://guxd.github.io/" target="_blank">Prof. Xiaodong Gu</a>.
-      </p>
-      <p class="about-text" style="margin-top: 0.75rem;">
-        I am interested in both <strong>research</strong> and <strong>engineering</strong>. I previously interned at <a href="https://en.oceanbase.com/" target="_blank"><strong>Ant Group (OceanBase)</strong></a> and <a href="https://www.stepfun.com/" target="_blank"><strong>StepFun AI</strong></a>, and co-founded <a href="https://cagen.ai" target="_blank"><strong>Emagen AI</strong></a>. This summer, I will join <a href="https://www.jumptrading.com/" target="_blank"><strong>Jump Trading</strong></a> as a research intern.
-      </p>
-      <p class="about-text" style="margin-top: 0.75rem;">
-        My research focuses on <strong>LLM Agents</strong>, spanning both application and evaluation.
-      </p>
-      <div class="interests">
-        <span class="interest-tag">LLM Agents</span>
-        <span class="interest-tag">Agent Application</span>
-        <span class="interest-tag">Agent Evaluation</span>
-        <span class="interest-tag">Multi-modal Models</span>
-        <span class="interest-tag">Trustworthy AI</span>
-      </div>
-    </div>
-  </section>
+      <!-- Experience -->
+      <div class="section" id="experience">
+        <h2 class="section-title">Experience</h2>
 
-  <!-- Publications -->
-  <section id="publications">
-    <div class="container">
-      <p class="section-label">// publications</p>
-      <h2 class="section-title">Selected Papers</h2>
-      <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.5rem;">* equal contribution &nbsp; † corresponding author</p>
-
-      <div class="pub-year">2026</div>
-
-      <div class="pub-item">
-        <div class="pub-title">A Survey of Self-Evolving Agents: On Path to Artificial Super Intelligence</div>
-        <div class="pub-authors">Huan-ang Gao*, Jiayi Geng*, Wenyue Hua*, ..., <span class="me">Yixiong Fang</span>, ..., Mengdi Wang†</div>
-        <div class="pub-meta">
-          <span class="pub-venue">TMLR 2026</span>
-        </div>
-        <div class="pub-tldr">First comprehensive survey on self-evolving AI agents, establishing a roadmap toward ASI.</div>
-        <div class="pub-links">
-          <a href="https://arxiv.org/abs/2507.21046" target="_blank" class="pub-link">arXiv</a>
-          <a href="https://github.com/CharlesQ9/Self-Evolving-Agents" target="_blank" class="pub-link">Code</a>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-title">Reasoning in Trees: Improving Retrieval-Augmented Generation for Multi-Hop Question Answering</div>
-        <div class="pub-authors">Yuling Shi, Maolin Sun, Zijun Liu, Mo Yang, <span class="me">Yixiong Fang</span>, Tianran Sun, Xiaodong Gu</div>
-        <div class="pub-meta">
-          <span class="pub-venue">WWW 2026 Companion</span>
-        </div>
-        <div class="pub-tldr">Hierarchical framework that structures multi-hop queries into reasoning trees, improving F1 by 7.0% and EM by 6.0%.</div>
-        <div class="pub-links">
-          <a href="https://arxiv.org/abs/2601.11255" target="_blank" class="pub-link">arXiv</a>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-title">GameDevBench: Evaluating Agentic Capabilities Through Game Development</div>
-        <div class="pub-authors">Wayne Chi, <span class="me">Yixiong Fang</span>, Arnav Yayavaram, Siddharth Yayavaram, Seth Karten, Qiuhong Anna Wei, Runkun Chen, Alexander Wang, Valerie Chen, Ameet Talwalkar, Chris Donahue</div>
-        <div class="pub-tldr">A benchmark for evaluating AI agents on game development tasks, demanding sophisticated coding and multimodal skills across 132 tasks.</div>
-        <div class="pub-links">
-          <a href="https://arxiv.org/abs/2602.11103" target="_blank" class="pub-link">arXiv</a>
-          <a href="https://github.com/waynchi/gamedevbench" target="_blank" class="pub-link">Code</a>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-title">Test vs Mutant: Adversarial LLM Agents for Robust Unit Test Generation</div>
-        <div class="pub-authors">Pengyu Chang, <span class="me">Yixiong Fang</span>, Silin Chen, Yuling Shi, Beijun Shen, Xiaodong Gu</div>
-        <div class="pub-tldr">Adversarial agent framework that pits test-generation against mutant-generation agents, improving fault detection by 8.56% over best existing methods.</div>
-        <div class="pub-links">
-          <a href="https://arxiv.org/abs/2602.08146" target="_blank" class="pub-link">arXiv</a>
-        </div>
-      </div>
-
-      <div class="pub-year">2025</div>
-
-      <div class="pub-item">
-        <div class="pub-title">From Uncertainty to Trust: Enhancing Reliability in Vision-Language Models with Uncertainty-Guided Dropout Decoding</div>
-        <div class="pub-authors"><span class="me">Yixiong Fang*</span>, Ziran Yang*, Zhaorun Chen, Zhuokai Zhao†, Jiawei Zhou†</div>
-        <div class="pub-meta">
-          <span class="pub-venue">NeurIPS 2025</span>
-        </div>
-        <div class="pub-tldr">Novel decoding strategy using uncertainty-guided dropout to improve VLM reliability and reduce hallucinations.</div>
-        <div class="pub-links">
-          <a href="https://arxiv.org/abs/2412.06474" target="_blank" class="pub-link">arXiv</a>
-          <a href="https://github.com/kigb/DropoutDecoding" target="_blank" class="pub-link">Code</a>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-title">LastingBench: Defend Benchmarks Against Knowledge Leakage</div>
-        <div class="pub-authors"><span class="me">Yixiong Fang*</span>, Tianran Sun*, Yuling Shi, Min Wang, Xiaodong Gu†</div>
-        <div class="pub-meta">
-          <span class="pub-venue">EMNLP 2025 Findings</span>
-        </div>
-        <div class="pub-tldr">A framework to continuously reinforce and safeguard existing benchmarks against knowledge leakage in LLMs.</div>
-        <div class="pub-links">
-          <a href="https://arxiv.org/abs/2506.21614" target="_blank" class="pub-link">arXiv</a>
-          <a href="https://github.com/Seriousss/LastingBench" target="_blank" class="pub-link">Code</a>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-title">AttentionRAG: Attention-Guided Context Pruning in Retrieval-Augmented Generation</div>
-        <div class="pub-authors"><span class="me">Yixiong Fang</span>, Tianran Sun, Yuling Shi, Xiaodong Gu</div>
-        <div class="pub-meta">
-          <span class="pub-venue">ACL 2025 Workshop</span>
-        </div>
-        <div class="pub-tldr">Attention-based method to prune irrelevant context in RAG systems, improving efficiency without sacrificing accuracy.</div>
-        <div class="pub-links">
-          <a href="https://arxiv.org/abs/2503.10720" target="_blank" class="pub-link">arXiv</a>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-title">Enhancing Speech Large Language Models for Deepfake Speech and Audio Detection through Feature Dropout and Dropin</div>
-        <div class="pub-authors">Yupei Li*, <span class="me">Yixiong Fang*</span>, Lucia Specia, Xiaodong Gu, Björn Schuller</div>
-        <div class="pub-tldr">Improved deepfake audio detection in speech LLMs using novel dropout and dropin techniques.</div>
-      </div>
-
-      <div class="pub-year">2024</div>
-
-      <div class="pub-item">
-        <div class="pub-title">CodeCipher: Learning to Obfuscate Source Code Against LLMs</div>
-        <div class="pub-authors">Yalan Lin, Chengcheng Wan, <span class="me">Yixiong Fang</span>, Xiaodong Gu</div>
-        <div class="pub-tldr">Automated code obfuscation technique to protect source code from being understood by LLMs.</div>
-        <div class="pub-links">
-          <a href="https://arxiv.org/abs/2410.05797" target="_blank" class="pub-link">arXiv</a>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-title">Efficient Computation of Eigenvalues in Diffusion Maps: A Multi-Strategy Approach</div>
-        <div class="pub-authors"><span class="me">Yixiong Fang*</span>, Weixi Yang</div>
-        <div class="pub-meta">
-          <span class="pub-venue">SPML 2024</span>
-        </div>
-        <div class="pub-tldr">Multi-strategy approach for efficient eigenvalue computation in diffusion maps.</div>
-        <div class="pub-links">
-          <a href="https://doi.org/10.54254/2755-2721/55/20241429" target="_blank" class="pub-link">DOI</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience">
-    <div class="container">
-      <p class="section-label">// experience</p>
-      <h2 class="section-title">Work Experience</h2>
-      <div class="exp-list">
         <div class="exp-item">
-          <div class="exp-header">
+          <div class="exp-top">
             <span class="exp-role">Co-Founder</span>
             <span class="exp-date">Current</span>
           </div>
           <div class="exp-company"><a href="https://cagen.ai" target="_blank">Emagen AI</a></div>
           <div class="exp-desc">Leading the development of Cagen, an AI-native user based organization platform.</div>
         </div>
+
         <div class="exp-item">
-          <div class="exp-header">
+          <div class="exp-top">
             <span class="exp-role">SQL Intern</span>
-            <span class="exp-date">Jul – Aug 2024</span>
+            <span class="exp-date">Jul &ndash; Aug 2024</span>
           </div>
-          <div class="exp-company"><a href="https://en.oceanbase.com/" target="_blank">Ant Group · OceanBase</a></div>
+          <div class="exp-company"><a href="https://en.oceanbase.com/" target="_blank">Ant Group &middot; OceanBase</a></div>
           <div class="exp-desc">Optimized utf8 parsing with SIMD for up to 20x performance increase; added southeast Asia charset and external table features.</div>
         </div>
+
         <div class="exp-item">
-          <div class="exp-header">
+          <div class="exp-top">
             <span class="exp-role">AI Research Intern</span>
-            <span class="exp-date">Mar – Jun 2024</span>
+            <span class="exp-date">Mar &ndash; Jun 2024</span>
           </div>
           <div class="exp-company"><a href="https://www.stepfun.com/" target="_blank">StepFun AI</a></div>
           <div class="exp-desc">Developed early-stage agent with tools and RAG system; built the OpenAPI platform.</div>
         </div>
+
         <div class="exp-item">
-          <div class="exp-header">
+          <div class="exp-top">
             <span class="exp-role">Quantitative Research Intern</span>
-            <span class="exp-date">Jan – Feb 2024</span>
+            <span class="exp-date">Jan &ndash; Feb 2024</span>
           </div>
           <div class="exp-company">China Merchants Securities</div>
           <div class="exp-desc">Built quantitative trading strategies and performed market analysis using ML techniques.</div>
         </div>
+
         <div class="exp-item">
-          <div class="exp-header">
+          <div class="exp-top">
             <span class="exp-role">Quantitative Research Intern</span>
-            <span class="exp-date">Jul – Aug 2022</span>
+            <span class="exp-date">Jul &ndash; Aug 2022</span>
           </div>
           <div class="exp-company">Changjiang Securities International</div>
           <div class="exp-desc">Developed algorithmic trading models and conducted financial data analysis for equity markets.</div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Teaching -->
-  <section id="teaching">
-    <div class="container">
-      <p class="section-label">// teaching</p>
-      <h2 class="section-title">Teaching</h2>
-      <div class="teaching-list">
+      <!-- Teaching -->
+      <div class="section" id="teaching">
+        <h2 class="section-title">Teaching</h2>
+
         <div class="teaching-item">
           <div class="teaching-name">11-785: Introduction to Deep Learning</div>
-          <div class="teaching-meta">Teaching Assistant · Spring 2026</div>
+          <div class="teaching-meta">Teaching Assistant &middot; Spring 2026</div>
         </div>
         <div class="teaching-item">
           <div class="teaching-name">Mthread GPU Open Course</div>
-          <div class="teaching-meta">Teaching Assistant · Spring 2025</div>
+          <div class="teaching-meta">Teaching Assistant &middot; Spring 2025</div>
         </div>
         <div class="teaching-item">
           <div class="teaching-name">AI1102: Intel's Cutting-Edge AI Algorithms and Practices</div>
-          <div class="teaching-meta">Teaching Assistant · Spring 2025</div>
+          <div class="teaching-meta">Teaching Assistant &middot; Spring 2025</div>
         </div>
         <div class="teaching-item">
           <div class="teaching-name">SJTU Xuesen Challenge Winter Camp (AI)</div>
-          <div class="teaching-meta">Teaching Assistant · Winter 2025</div>
+          <div class="teaching-meta">Teaching Assistant &middot; Winter 2025</div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <footer>
-    <div class="container">
-      &copy; 2025 Yixiong Fang
-    </div>
-  </footer>
+      <footer>
+        &copy; 2025 Yixiong Fang
+      </footer>
+
+    </main>
+  </div>
 
   <script>
-    // Intersection Observer for fade-in animations
+    // Intersection Observer for fade-in
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('visible');
       });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('section:not(.hero)').forEach(section => {
-      observer.observe(section);
-    });
-
-    // Smooth active nav link
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const sections = document.querySelectorAll('section[id]');
-
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        if (scrollY >= sectionTop) {
-          current = section.getAttribute('id');
-        }
-      });
-      navLinks.forEach(link => {
-        link.style.color = link.getAttribute('href') === '#' + current
-          ? 'var(--text)' : '';
-      });
-    });
+    }, { threshold: 0.05 });
+    document.querySelectorAll('.section').forEach(s => observer.observe(s));
 
     // Fetch GitHub star counts
     document.querySelectorAll('.pub-link').forEach(link => {
@@ -788,7 +656,7 @@
               const count = data.stargazers_count >= 1000
                 ? (data.stargazers_count / 1000).toFixed(1) + 'k'
                 : data.stargazers_count;
-              link.innerHTML = `<svg class="star-icon" viewBox="0 0 16 16" fill="currentColor"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg><span class="star-count">${count}</span>`;
+              link.innerHTML = `Code <svg class="star-icon" viewBox="0 0 16 16" fill="currentColor"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg><span class="star-count">${count}</span>`;
             }
           })
           .catch(() => {});
